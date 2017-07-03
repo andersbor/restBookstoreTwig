@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All books</title>
+</head>
+<body>
+<h1>Books</h1>
+
+{% if books is empty %}
+    No books
+{% else %}
+    <ul>
+        {% for book in books %}
+            <li>
+                {{ book.Id }}
+                <b>{{ book.Author }}</b>:
+                <i>{{ book.Title }}</i>,
+                {{ book.Publisher }},
+                {{ book.Price }}
+            </li>
+        {% endfor %}</ul>
+{% endif %}
+
+</body>
+</html>
