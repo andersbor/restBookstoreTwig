@@ -3,6 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Book store</title>
+    <!-- http://www.davidtanzer.net/css_vertical_align -->
+    <style>
+        label {
+            float: left;
+            width: 5%;
+            text-align: right;
+            margin-right: 0.5em;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+        }
+
+        .form-field-no-caption {
+            margin-left: 5%;
+            padding-left: 0.5em;
+        }
+    </style>
 </head>
 <body>
 <h1>Book store</h1>
@@ -27,7 +46,7 @@
     Title <input type="text" name="title"/> <br/>
     Publisher <input type="text" name="publisher"/> <br/>
     Price <input type="number" step="0.01" name="price" value="0.0"/>
-    <input type="submit"/>
+    <input type="submit" value="Add"/>
 </form>
 
 <h2>Delete book by Id</h2>
@@ -38,12 +57,22 @@
 
 <h2>Update book</h2>
 <form action="controllers/updatebook.php" method="post">
-    Id <input type="number" name="id"/><br/>
-    Author <input type="text" name="author"/> <br/>
-    Title <input type="text" name="title"/> <br/>
-    Publisher <input type="text" name="publisher"/> <br/>
-    Price <input type="number" step="0.01" name="price" value="0.0"/>
-    <input type="submit"/>
+    <label for="id">Id</label>
+    <input type="number" name="id" id="id"/><br/>
+    <label for="author">Author</label>
+    <input type="text" name="author" id="author"/> <br/>
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title"/> <br/>
+
+    <label for="publisher">Publisher</label>
+    <input type="text" name="publisher" id="publisher"/> <br/>
+
+    <label for="price">Price</label>
+    <input type="number" step="0.01" name="price" value="0.0" id="price"/><br/>
+
+    <span class="form-field-no-caption">
+      <input type="submit" value="Update"/>
+    </span>
 </form>
 </body>
 </html>
