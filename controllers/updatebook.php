@@ -9,7 +9,7 @@ $price = $_POST["price"];
 $data = array("Author" => $author, "Title" => $title, "Publisher" => $publisher, "Price" => $price);
 $json_string = json_encode($data);
 
-$uri = "http://anbobookstorerest.cloudapp.net/Service1.svc/books/";
+$uri = "http://anbo-restserviceproviderbooks.azurewebsites.net/Service1.svc/books/";
 $full_uri = $uri . $id;
 $ch = curl_init($full_uri);
 // curl is good for more complex operations than just plain GET

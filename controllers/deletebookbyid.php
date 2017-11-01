@@ -1,5 +1,5 @@
 <?php
-$uri = "http://anbobookstorerest.cloudapp.net/Service1.svc/books/";
+$uri = "http://anbo-restserviceproviderbooks.azurewebsites.net/Service1.svc/books/";
 $id = $_POST['id'];
 $full_uri = $uri . $id;
 

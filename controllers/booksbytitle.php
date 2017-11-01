@@ -1,5 +1,5 @@
 <?php
-$uri = "http://anbobookstorerest.cloudapp.net/Service1.svc/books/";
+$uri = "http://anbo-restserviceproviderbooks.azurewebsites.net/Service1.svc/books/";
 $titlefragment = $_POST['titlefragment'];
 $jsondata = file_get_contents($uri . "title/" . $titlefragment);
 $books = json_decode($jsondata, true);
